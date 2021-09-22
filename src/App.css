@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;600;700&display=swap");
+
+* {
+  font-family: "IBM Plex Sans KR";
+  font-weight: 500;
+}
+
+.paimon {
+  position: fixed;
+  opacity: 0.7;
+  z-index: -1;
+  margin: 0 0 0 30vw;
+}
+
+button {
+  border-color: transparent;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: -10px;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-top {
+  0% {
+    opacity: 0.5;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cube-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cube {
+  background-color: #4b3869;
+  transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.solveBtn {
+  width: 50%;
+  font-size: 120%;
+  margin-top: 1.5rem;
+  padding: 1.5%;
+  background-color: #664e88;
+  color: white;
+  border-radius: 1rem;
+}
+
+.cube-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (orientation: portrait) {
+  h1 {
+    font-size: calc(1.25rem + 1vh);
+  }
+
+  h4 {
+    font-size: calc(0.5rem + 1vh);
+  }
+
+  .paimon {
+    width: 50vw;
+  }
+
+  .container {
+    width: 90vw;
+  }
+
+  .cube {
+    width: calc(2.5rem + 2.25vh);
+    height: calc(2.5rem + 2.25vh);
+    border-radius: calc(0.7rem + 1vh);
+  }
+
+  .cube-result {
+    padding: 1vh;
+    width: calc(5rem + 3vh);
+    height: 3.2vw;
+    font-size: calc(0.7rem + 1vh);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  h1 {
+    font-size: 2.5vw;
+  }
+
+  h4 {
+    font-size: 1.5vw;
+  }
+
+  .paimon {
+    width: 30vw;
+  }
+
+  .container {
+    width: 50vw;
+  }
+
+  .cube {
+    width: calc(1.25rem + 3vw);
+    height: calc(1.25rem + 3vw);
+    border-radius: calc(0.4rem + 1vw);
+  }
+
+  .cube-result {
+    padding: 1vw;
+    font-size: calc(1rem + 0.4vw);
+    width: calc(5rem + 3vw);
+    height: 1.6vw;
+  }
+}
